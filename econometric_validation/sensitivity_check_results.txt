@@ -1,0 +1,76 @@
+Bai-Perron / PELT penalty sensitivity check
+============================================
+Data source: GitHub repo sasikiranaaz/The-Sustainability-Governance-Paradox,
+             The_Sustainability_Governance_Paradox_Dataset/network properties/{density,modularity,nodes,avg weighted degree}.csv
+Observations: 216 monthly observations per series, Jan 2007 - Dec 2024
+Series:       12 (3 commodities x 4 metrics)
+Transforms:   logit for density and modularity, log(x+1) for avg weighted degree, identity for node count
+Penalty:      beta = c * sigma_hat^2 * log(n), with sigma_hat^2 from residuals of a fitted linear trend
+Algorithm:    PELT (ruptures package), L2 cost, minimum segment length = 12 months
+Penalty grid: c in {0.5, 1.0, 1.5, 2.0}
+
+
+Total break counts
+------------------
+c = 0.5  ->  48 breaks (baseline + 14)
+c = 1.0  ->  34 breaks (baseline)
+c = 1.5  ->  32 breaks (baseline -  2)
+c = 2.0  ->  25 breaks (baseline -  9)
+
+Range: [25, 48].  Magnitude of change vs. baseline: from -9 to +14.
+
+
+Breaks within +/- 6 months of January 2015 (the SDG adoption window)
+--------------------------------------------------------------------
+c       count   series and break dates in the window
+0.5     5       coal_density(2014-12), coal_modularity(2015-05),
+                crude_oil_avg_weighted_degree(2014-12),
+                crude_oil_modularity(2014-12),
+                natural_gas_avg_weighted_degree(2014-12)
+1.0     3       coal_density(2014-12),
+                crude_oil_avg_weighted_degree(2014-12),
+                natural_gas_avg_weighted_degree(2014-12)
+1.5     3       coal_density(2014-12),
+                crude_oil_avg_weighted_degree(2014-12),
+                natural_gas_avg_weighted_degree(2014-12)
+2.0     1       natural_gas_avg_weighted_degree(2014-12)
+
+Critical observation: every break in the SDG window is dated December 2014
+(coinciding with the OPEC November 2014 decision and the oil-price collapse)
+or May 2015 (the c = 0.5 coal modularity break, which disappears at all higher
+penalty values). No break is dated to a post-SDG month other than May 2015.
+
+
+Baseline (c = 1.0) break dates per series
+-----------------------------------------
+coal_density:                      2008-04, 2009-12, 2014-12, 2016-03
+coal_modularity:                   2008-04, 2023-04
+coal_avg_weighted_degree:          2009-12, 2021-08
+coal_node_count:                   2009-12, 2012-11
+
+crude_oil_density:                 2009-12, 2013-04
+crude_oil_modularity:              2009-07, 2011-03, 2019-02, 2020-05, 2022-06
+crude_oil_avg_weighted_degree:     2009-12, 2014-12, 2021-08
+crude_oil_node_count:              2009-12, 2011-03
+
+natural_gas_density:               2009-12, 2012-01, 2018-04
+natural_gas_modularity:            2009-12, 2012-01
+natural_gas_avg_weighted_degree:   2009-12, 2012-01, 2014-12, 2021-08, 2023-04
+natural_gas_node_count:            2009-12, 2011-03
+
+
+Per-series counts across penalty grid
+-------------------------------------
+series                              c=0.5  c=1.0  c=1.5  c=2.0
+coal_density                          5      4      4      3
+coal_modularity                       4      2      2      2
+coal_avg_weighted_degree              3      2      2      2
+coal_node_count                       3      2      1      1
+crude_oil_density                     4      2      2      2
+crude_oil_modularity                  8      5      5      3
+crude_oil_avg_weighted_degree         5      3      3      1
+crude_oil_node_count                  3      2      1      1
+natural_gas_density                   4      3      3      3
+natural_gas_modularity                2      2      2      1
+natural_gas_avg_weighted_degree       5      5      5      5
+natural_gas_node_count                2      2      2      1
