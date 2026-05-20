@@ -1,0 +1,13 @@
+commodity,metric,2009-01,2011-01,2013-01,2015-01,2017-01,2019-01,2021-01
+coal,density,0.0,0.0,0.0,0.007,0.0,0.126,0.31
+coal,modularity,0.0,0.015,0.011,0.004,0.007,0.001,0.0
+coal,avg_weighted_degree,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+coal,node_count,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+crude_oil,density,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+crude_oil,modularity,0.01,0.0,0.028,0.726,0.305,0.813,0.002
+crude_oil,avg_weighted_degree,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+crude_oil,node_count,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+natural_gas,density,0.0,0.0,0.0,0.0,0.0,0.0,0.048
+natural_gas,modularity,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+natural_gas,avg_weighted_degree,0.021,0.009,0.0,0.0,0.003,0.117,0.013
+natural_gas,node_count,0.0,0.0,0.0,0.0,0.0,0.0,0.0

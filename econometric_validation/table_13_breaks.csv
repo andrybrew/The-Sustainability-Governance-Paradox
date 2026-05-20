@@ -1,0 +1,35 @@
+commodity,metric,break_date,crisis_match,sdg_aligned
+coal,density,2008-04,,no
+coal,density,2009-12,GFC 2008-09,no
+coal,density,2014-12,Oil collapse 2014-16,yes
+coal,density,2016-03,Oil collapse 2014-16,no
+coal,modularity,2008-04,,no
+coal,modularity,2023-04,,no
+coal,avg_weighted_degree,2009-12,GFC 2008-09,no
+coal,avg_weighted_degree,2021-08,,no
+coal,node_count,2009-12,GFC 2008-09,no
+coal,node_count,2012-11,,no
+crude_oil,density,2009-12,GFC 2008-09,no
+crude_oil,density,2013-04,,no
+crude_oil,modularity,2009-07,GFC 2008-09,no
+crude_oil,modularity,2011-03,,no
+crude_oil,modularity,2019-02,,no
+crude_oil,modularity,2020-05,COVID-19,no
+crude_oil,modularity,2022-06,Russia-Ukraine,no
+crude_oil,avg_weighted_degree,2009-12,GFC 2008-09,no
+crude_oil,avg_weighted_degree,2014-12,Oil collapse 2014-16,yes
+crude_oil,avg_weighted_degree,2021-08,,no
+crude_oil,node_count,2009-12,GFC 2008-09,no
+crude_oil,node_count,2011-03,,no
+natural_gas,density,2009-12,GFC 2008-09,no
+natural_gas,density,2012-01,,no
+natural_gas,density,2018-04,,no
+natural_gas,modularity,2009-12,GFC 2008-09,no
+natural_gas,modularity,2012-01,,no
+natural_gas,avg_weighted_degree,2009-12,GFC 2008-09,no
+natural_gas,avg_weighted_degree,2012-01,,no
+natural_gas,avg_weighted_degree,2014-12,Oil collapse 2014-16,yes
+natural_gas,avg_weighted_degree,2021-08,,no
+natural_gas,avg_weighted_degree,2023-04,,no
+natural_gas,node_count,2009-12,GFC 2008-09,no
+natural_gas,node_count,2011-03,,no

@@ -1,0 +1,13 @@
+commodity,metric,SDG_level,SDG_slope,joint_p,R2,joint_sig_5pct
+coal,density,+0.0036,-0.0001,0.787,0.01,no
+coal,modularity,-0.0027,-0.0002,0.622,0.01,no
+coal,avg_weighted_degree,-0.0308,-0.0002,0.490,0.01,no
+coal,node_count,-0.6453,-0.0048,0.395,0.02,no
+crude_oil,density,-0.0045,-0.0001,0.032,0.02,yes
+crude_oil,modularity,-0.0052,+0.0002,0.534,0.03,no
+crude_oil,avg_weighted_degree,-0.0087,-0.0002,0.543,0.02,no
+crude_oil,node_count,-0.5433,-0.0004,0.436,0.01,no
+natural_gas,density,+0.0017,-0.0000,0.916,0.03,no
+natural_gas,modularity,-0.0715,+0.0004,0.225,0.01,no
+natural_gas,avg_weighted_degree,+0.0049,-0.0001,0.942,0.02,no
+natural_gas,node_count,-0.2860,-0.0101,0.332,0.04,no
