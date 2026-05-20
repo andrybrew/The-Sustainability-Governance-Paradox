@@ -1,0 +1,5 @@
+numpy>=1.24
+pandas>=2.0
+ruptures>=1.1.9
+statsmodels>=0.14
+pandas-datareader>=0.10   # only needed if fetching Brent automatically from FRED

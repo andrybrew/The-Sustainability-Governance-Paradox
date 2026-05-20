@@ -19,11 +19,11 @@ SDG_WINDOW_MONTHS = 6
 MIN_SEGMENT_LENGTH = 12
 PENALTY_VALUES = [0.5, 1.0, 1.5, 2.0]
 
-DATA_DIR = Path(__file__).parent.parent / "The_Sustainability_Governance_Paradox_Dataset" / "network properties"
+DATA_DIR = Path(__file__).resolve().parent.parent / "The_Sustainability_Governance_Paradox_Dataset" / "network properties"
 FILES = {
     "density": "density.csv",
     "modularity": "modularity.csv",
-    "avg_weighted_degree": "avg_weighted_degree.csv",
+    "avg_weighted_degree": "avg weighted degree.csv",
     "node_count": "nodes.csv",
 }
 COMMODITY_LABELS = {
