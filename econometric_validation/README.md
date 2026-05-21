@@ -36,8 +36,8 @@ under their own terms of use:
   FRED series [`POILBREUSDM`](https://fred.stlouisfed.org/series/POILBREUSDM).
 - **`gpr`** — Caldara & Iacoviello (2022) Geopolitical Risk Index, monthly.
   [matteoiacoviello.com/gpr.htm](https://www.matteoiacoviello.com/gpr.htm).
-- **`growth`** — OECD G20 Composite Leading Indicator, amplitude-adjusted, monthly.
-  OECD.Stat / OECD Data Explorer (Composite Leading Indicators).
+- **`growth`** — US Industrial Production Index, monthly, used as a global
+  activity proxy. FRED series [`INDPRO`](https://fred.stlouisfed.org/series/INDPRO).
 
 To reconstruct the panel, run:
 
@@ -45,12 +45,12 @@ To reconstruct the panel, run:
 python fetch_controls.py
 ```
 
-`fetch_controls.py` can pull Brent automatically from FRED (requires
-`pandas-datareader`); the GPR and OECD series are downloaded manually and their
-file paths set at the top of the script. See the script's header for the exact
-sources, column expectations, and run instructions. The script aligns all three
-series to month-start dates, restricts to the Jan 2007 – Dec 2024 window, and
-overwrites `controls_monthly_2007_2024.csv` with the populated panel.
+`fetch_controls.py` can pull Brent and INDPRO automatically from FRED (requires
+`pandas-datareader`); the GPR series is downloaded manually and its file path set
+at the top of the script. See the script's header for the exact sources, column
+expectations, and run instructions. The script aligns all three series to
+month-start dates, restricts to the Jan 2007 – Dec 2024 window, and overwrites
+`controls_monthly_2007_2024.csv` with the populated panel.
 
 ## How to run
 
