@@ -44,10 +44,10 @@ between January 2007 and December 2024. Records were standardized and cleaned
 prior to network construction.
 
 The macroeconomic control series used in the identification analysis (Brent crude
-prices, the Caldara–Iacoviello Geopolitical Risk Index, and the OECD G20 Composite
-Leading Indicator) are maintained by third parties and are not redistributed here;
-`econometric_validation/fetch_controls.py` reconstructs the control panel from the
-original public sources.
+prices, the Caldara–Iacoviello Geopolitical Risk Index, and the US Industrial
+Production Index as a global activity proxy) are maintained by third parties and
+are not redistributed here; `econometric_validation/fetch_controls.py` reconstructs
+the control panel from the original public sources.
 
 ## Reproducing the analysis
 
